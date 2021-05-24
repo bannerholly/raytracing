@@ -82,7 +82,7 @@
       pn->setMaterialParam(MaterialParam::Specular,spec);
       pn->setMaterialShiness(shiness);
       ImageTexture* imt = new ImageTexture();
-      if(!imt->loadJPEGImage("画像名を入れる")){
+      if(!imt->loadJPEGImage("XXXXXXXXXX")){
         std::cout << "error " << std::endl;
       }
       else{
@@ -97,11 +97,11 @@
       s.addObject(ss);
 #endif 
 #if 0
-      //オブジェクトファイルの使用(重すぎんだろ)
+      //オブジェクトファイルの使用
       ObjectLoader* loader = new ObjectLoader();
       TriangleMesh* mesh = o_factry.createTriangleMesh();
       bool isLoad = false;
-      isLoad = loader->load("./model/bunny.obj",mesh);
+      isLoad = loader->load("XXXXXXXXXX",mesh);
       if(!isLoad){
         Logger::logString("obj_load failed");
       }
