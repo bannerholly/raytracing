@@ -208,7 +208,7 @@ void View::specialKeyboard(int key, int x, int y){
     glutIdleFunc(idle);
     break;
   case GLUT_KEY_F5:
-    s->saveImage("XXXXXXXXX",false);
+    s->saveImage("XXXXXXXXxX",false);
   default:
     glutIdleFunc(0);
     break;
