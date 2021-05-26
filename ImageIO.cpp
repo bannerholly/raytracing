@@ -39,7 +39,7 @@ bool ImageIO::pngImageRead(const char* filename,Image& img){
   }
   info = png_create_info_struct(png);
   if(info == NULL){
-    std::cout << "png_create_info_struct error" << std::endl;
+    std::cout << "png_create info struct error" << std::endl;
     png_destroy_read_struct(&png, &info, NULL);
     fclose(fp);
     return false;
