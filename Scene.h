@@ -6,7 +6,6 @@
 #include "Plane.h"
 #include "RayTracer.h"
 #include "Image.h"
-#include "ImageIO.h"
 #include <iostream>
 #include <GL/glut.h>
 #include <vector> //オブジェクトとか光源をベクターでまとめて管理する方式(Compositeパターンにする?)
@@ -74,7 +73,6 @@ class Scene{
     inline Vec3 getBackgroundColor(){
       return background_color;
     } 
-    void saveImage(const char* filename,bool isPNG);
   private:
 	  std::vector<BaseLight *> lights; //光源のベクター
 	  std::vector<BaseObject *> objects; //物体のベクター
@@ -82,6 +80,5 @@ class Scene{
 
     Vec3 background_color; //背景色<--多分初期時のやつかな
     RayTracer tracer; //レイトレ―スするやつ
-    ImageIO im_io;
     Image* data;
 };

@@ -6,8 +6,6 @@
 #include "Sphere.h"
 #include "Plane.h"
 #include "Triangle.h"
-#include "TriangleMesh.h"
-#include "ObjectLoader.h"
 #include "Material.h"
 #include "EmitMaterial.h"
 #include "Logger.h"

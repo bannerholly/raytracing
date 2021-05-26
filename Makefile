@@ -1,6 +1,6 @@
-engineobj = main.o View.o Camera.o RayTracer.o Scene.o Logger.o Image.o ImageIO.o SceneMaker.o ObjectLoader.o
+engineobj = main.o View.o Camera.o RayTracer.o Scene.o Logger.o Image.o SceneMaker.o 
 engine = $(engineobj:%.o=%.cpp)
-objectobj = Sphere.o AmbientLight.o DirectionalLight.o PointLight.o Material.o TextureMaterial.o Plane.o Triangle.o ObjectInstance.o TriangleMesh.o Box.o UniformGrid.o UniformGridTracer.o
+objectobj = Sphere.o AmbientLight.o DirectionalLight.o PointLight.o Material.o TextureMaterial.o Plane.o Triangle.o ObjectInstance.o  Box.o UniformGrid.o UniformGridTracer.o
 object = $(objectobj:%.o=%.cpp)
 mathobj = Matrix.o Quat.o
 math = $(mathobj:%.o=%.cpp)
@@ -41,8 +41,6 @@ UniformGridTracer.o : UniformGridTracer.cpp
 	g++ -c -o UniformGridTracer.o UniformGridTracer.cpp
 ObjectInstance.o: ObjectInstance.cpp
 	g++ -c -o ObjectInstance.o ObjectInstance.cpp
-ObjectLoader.o :ObjectLoader.cpp
-	g++ -c -o ObjectLoader.o ObjectLoader.cpp
 RayTracer.o: RayTracer.cpp
 	g++ -c -o RayTracer.o RayTracer.cpp
 Logger.o: Logger.cpp
@@ -59,8 +57,7 @@ Material.o: Material.cpp
 	g++ -c -o Material.o Material.cpp
 TextureMaterial.o: TextureMaterial.cpp
 	g++ -c -o TextureMaterial.o TextureMaterial.cpp
-ImageIO.o: ImageIO.cpp
-	g++ -c -o ImageIO.o ImageIO.cpp
+
 program: $(engineobj) $(objectobj) $(mathobj)
 	g++  -o program $(engineobj) $(objectobj) $(mathobj) -lglut -lGLU -lGL -lm -lpng -ljpeg
 #デバックコンパイル用

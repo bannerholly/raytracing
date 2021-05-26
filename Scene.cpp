@@ -56,22 +56,3 @@ void Scene::render(){
     }
   }
 }
-
-void Scene::saveImage(const char* filename,bool isPNG){
-  if(isPNG){
-    if(!im_io.pngImageWrite(filename,data)){
-      std::cout << "save failed" << std::endl;
-    }
-    else{
-      std::cout << "save success" << std::endl;
-    }
-  }
-  else{
-    if(!im_io.jpegImageWrite(filename,data)){
-      std::cout << "save failed" << std::endl;
-    }
-    else{
-      std::cout << "save success" << std::endl;
-    }
-  }
-}

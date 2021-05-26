@@ -4,7 +4,6 @@
 #include "Plane.h"
 #include "Box.h"
 #include "Triangle.h"
-#include "TriangleMesh.h"
 #include "ObjectInstance.h"
 
 class ObjectFactry{
@@ -38,8 +37,5 @@ class ObjectFactry{
       ObjectInstance *obj = new ObjectInstance(b);
       return obj;
     }
-    TriangleMesh* createTriangleMesh(){
-		  TriangleMesh *obj = new TriangleMesh();
-		  return obj;
-	  }
+
 };

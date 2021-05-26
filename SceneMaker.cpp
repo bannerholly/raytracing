@@ -1,7 +1,6 @@
 #include "SceneMaker.h"
 #include "TextureMaterial.h"
 #include "ColorTexture.h"
-#include "ImageTexture.h"
 #include "ObjectInstance.h"
 
 //シーンの作成
@@ -81,14 +80,6 @@
       pn->setMaterialParam(MaterialParam::Diffuse,red);
       pn->setMaterialParam(MaterialParam::Specular,spec);
       pn->setMaterialShiness(shiness);
-      ImageTexture* imt = new ImageTexture();
-      if(!imt->loadJPEGImage("XXXXXXXXXX")){
-        std::cout << "error " << std::endl;
-      }
-      else{
-        TextureMaterial* tm = new TextureMaterial(imt);
-        pn->setMaterial(tm);
-      }
       s.addObject(pn);
       ObjectInstance * ss = new ObjectInstance(pn);
       ss->translate(-80.0,0.0,0.0);
